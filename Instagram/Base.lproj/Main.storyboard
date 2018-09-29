@@ -55,11 +55,27 @@
                     <connections>
                         <outlet property="passwordField" destination="eOA-cJ-MMr" id="N5C-Y7-1qC"/>
                         <outlet property="usernameField" destination="97K-rP-nuz" id="7vI-4K-vgO"/>
+                        <segue destination="zn5-br-J11" kind="presentation" identifier="loginSegue" id="kjQ-4d-OXt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hW6-df-MIr">
+            <objects>
+                <viewController id="zn5-br-J11" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9UO-9U-Ygm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1tJ-9I-vhr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYu-6V-M2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="118"/>
         </scene>
     </scenes>
 </document>

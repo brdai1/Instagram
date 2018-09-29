@@ -30,6 +30,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(_ sender: Any) {
+        PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: Error?) in
+            if user != nil {
+                print("Your'e logged in!")
+                
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+        }
+    
     }
     
     @IBAction func onSignUp(_ sender: Any) {
@@ -40,9 +48,11 @@ class LoginViewController: UIViewController {
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
                 print ("Yay, created a user!")
+                
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
-                if error?.code == 202 {
+                if error?._code == 202 {
                     print("Username is already taken")
                 }
             }
